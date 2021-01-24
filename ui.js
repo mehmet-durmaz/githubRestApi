@@ -2,6 +2,7 @@ class UI{
     constructor(){
         this.profileDiv = document.getElementById("profile");
         this.reposDiv = document.getElementById("repos");
+        this.cardBody = document.querySelector(".card-body"); 
 
     }
     showInfo(user){
@@ -50,6 +51,16 @@ class UI{
         
         
         `
+
+    }
+
+    showError(message){
+        const div = document.createElement("div");
+        div.className = "alert alert-danger";
+        div.textContent = message;
+
+        this.cardBody.appendChild(div);
+
 
     }
 

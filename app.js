@@ -20,7 +20,7 @@ function getData(e){
     github.getDataFromGithub(username)
     .then(response => {
         if(response.user.message === "Not Found"){
-            alert("kullanıcı bulunamadı");
+            ui.showError("kullanıcı bulunumadı");
         }
         else{
             ui.showInfo(response.user)
