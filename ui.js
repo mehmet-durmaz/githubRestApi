@@ -61,6 +61,10 @@ class UI{
 
         this.cardBody.appendChild(div);
 
+        setTimeout(() => {
+            div.remove();
+        }, 2000);
+
 
     }
 
