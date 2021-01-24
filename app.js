@@ -24,6 +24,7 @@ function getData(e){
         }
         else{
             ui.showInfo(response.user)
+            ui.showRepoInfo(response.repo);
         }
     })
     .catch(err => console.log(err));
