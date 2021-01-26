@@ -3,6 +3,7 @@ const formInput = document.getElementById("githubname");
 const github = new Github();
 const ui = new UI();
 
+
 eventListeners();
 
 function eventListeners(){
@@ -23,6 +24,7 @@ function getData(e){
             ui.showError("kullanıcı bulunumadı");
         }
         else{
+            
             ui.showInfo(response.user)
             ui.showRepoInfo(response.repo);
         }
