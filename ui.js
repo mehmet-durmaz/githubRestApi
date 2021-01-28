@@ -3,6 +3,7 @@ class UI{
         this.profileDiv = document.getElementById("profile");
         this.reposDiv = document.getElementById("repos");
         this.cardBody = document.querySelector(".card-body"); 
+        this.lastUsers = document.getElementById("last-users");
 
     }
     showInfo(user){
@@ -100,6 +101,19 @@ class UI{
 
 
 
+    }
+
+    addSearchedToUI(username){
+        let users = Storage.getSearchedFromStorage();
+        
+        if(users.indexOf(username) === -1){
+
+            const li = document.createElement("li");
+            li.className = "list-group-item";
+            li.textContent = username;
+
+            this.lastUsers.appendChild(li);
+        }
     }
 
 
