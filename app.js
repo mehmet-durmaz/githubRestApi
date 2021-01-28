@@ -12,6 +12,7 @@ function eventListeners(){
     githubForm.addEventListener("submit",getData);
     clearLastUser.addEventListener("click",clearAllSearched);
     document.addEventListener("DOMContentLoaded",getAllSearched);
+
 }
 
 function getData(e){
@@ -37,17 +38,17 @@ function getData(e){
     .catch(err => console.log(err));
     }
 
-    
-    
-    
-    
-
-    
-
     e.preventDefault();
 }
 
 function clearAllSearched(){
+
+        if(confirm("emin misiniz")){
+            Storage.clearAllSearchedFromStorage();
+            ui.allClearSearchedFromUI();
+        }
+
+
 
 }
 function getAllSearched(){
